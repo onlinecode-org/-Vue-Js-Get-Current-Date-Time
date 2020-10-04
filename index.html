@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to get current date time in vue js? - onlinecode-org</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+   
+<div id="app">
+    {{ message }}
+</div>
+  
+</body>
+  
+<script type="text/javascript">
+ new Vue({
+    el: '#app',
+    data: { 
+          message:"hello"
+      },
+      methods:{
+        date_function: function () {
+   
+            var currentDate = new Date();
+            console.log(currentDate);
+  
+            var formatted_date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+            console.log(formatted_date);
+     
+        }
+    },
+    mounted () {
+      this.date_function()
+    }
+ });
+    
+</script>
+</html> 
